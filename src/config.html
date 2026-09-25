@@ -1,0 +1,51 @@
+<div id="tv-config">
+  <header class="tv-header">
+    <div>
+      <p class="tv-eyebrow">Kintone プラグイン設定</p>
+      <h1>テーブル表示制御</h1>
+      <p class="tv-lead">テーブルごとに、表示を許可・拒否する組織とグループを設定します。</p>
+    </div>
+    <div class="tv-priority-note" role="note">
+      <strong>拒否設定が優先されます</strong>
+      <span>同じ利用者が許可と拒否の両方に該当する場合、そのテーブルは表示されません。</span>
+    </div>
+  </header>
+
+  <div id="tv-status" class="tv-status" role="status" aria-live="polite"></div>
+  <div id="tv-error" class="tv-message tv-message-error" role="alert" hidden></div>
+  <div id="tv-loading" class="tv-loading" role="status">
+    <span class="tv-spinner" aria-hidden="true"></span>
+    <span>設定に必要な情報を読み込んでいます…</span>
+  </div>
+
+  <main id="tv-content" hidden>
+    <section aria-labelledby="tv-rules-heading">
+      <div class="tv-section-heading">
+        <div>
+          <h2 id="tv-rules-heading">閲覧ルール</h2>
+          <p>1つのテーブルにつき1つのルールを作成できます。</p>
+        </div>
+        <button id="tv-add-rule" class="tv-button tv-button-secondary" type="button">
+          <span aria-hidden="true">＋</span> ルールを追加
+        </button>
+      </div>
+      <div id="tv-rules" class="tv-rules"></div>
+      <p id="tv-empty" class="tv-empty" hidden>ルールがありません。「ルールを追加」から設定を始めてください。</p>
+    </section>
+
+    <aside class="tv-help" aria-label="設定時の注意">
+      <h2>設定時の注意</h2>
+      <ul>
+        <li>画面上の表示だけを制御します。CSV出力・REST APIなどからのデータ取得や、一覧画面は制限しません。</li>
+        <li>許可・拒否のどちらにも該当しない利用者には、「その他の利用者」の設定が適用されます。</li>
+        <li>対象テーブルの必須フィールドは確認用に表示します。このプラグインがフォームやデータを変更することはありません。</li>
+        <li>この設定画面では組織・グループ単位のみ設定できます。ユーザー単位の指定とゲストユーザーには対応していません。</li>
+      </ul>
+    </aside>
+
+    <footer class="tv-actions">
+      <button id="tv-save" class="tv-button tv-button-primary" type="button">保存</button>
+      <button id="tv-cancel" class="tv-button tv-button-plain" type="button">キャンセル</button>
+    </footer>
+  </main>
+</div>

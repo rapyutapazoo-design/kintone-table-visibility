@@ -1,0 +1,20 @@
+{
+  "name": "kintone-table-visibility",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kintoneのテーブルを組織・グループに応じて表示するプラグイン",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "build": "node scripts/build.cjs",
+    "verify": "node scripts/verify-package.cjs",
+    "preview": "node scripts/preview.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@kintone/cli": "1.21.3",
+    "jsdom": "26.1.0",
+    "jszip": "3.10.1"
+  }
+}

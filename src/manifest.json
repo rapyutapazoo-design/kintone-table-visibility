@@ -1,0 +1,14 @@
+{
+  "manifest_version": 1,
+  "version": "1.0.0",
+  "type": "APP",
+  "name": { "ja": "テーブル表示制御", "en": "Table Visibility" },
+  "description": {
+    "ja": "組織・グループごとにテーブルの表示を切り替えます。画面表示のみを制御し、データのアクセス権は変更しません。",
+    "en": "Show or hide tables by organization and group. Controls screen visibility only, not data access permissions."
+  },
+  "icon": "icon.png",
+  "desktop": { "js": ["core.js", "api.js", "runtime.js"] },
+  "mobile": { "js": ["core.js", "api.js", "runtime.js"] },
+  "config": { "html": "config.html", "js": ["core.js", "api.js", "config.js"], "css": ["config.css"], "required_params": ["settings"] }
+}

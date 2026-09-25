@@ -1,0 +1,11 @@
+node_modules/
+.keys/
+*.ppk
+*.pem
+.DS_Store
+coverage/
+dist/*
+!dist/table-visibility.zip
+!dist/plugin-id.txt
+!dist/SHA256SUMS
+test-results/
